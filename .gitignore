@@ -1,0 +1,18 @@
+# Windows
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Obsidian
+.obsidian/
+.trash/
+
+# Node
+node_modules/
+.env
+.env.*
+
+# Editores
+.vscode/
+.idea/
+*.swp
