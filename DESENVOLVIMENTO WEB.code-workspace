@@ -1,0 +1,45 @@
+{
+  // Este arquivo abre a matéria inteira no VS Code.
+  // Dois cliques nele e tudo já vem carregado: as pastas e o repositório.
+
+  "folders": [
+    {
+      "name": "DESENVOLVIMENTO WEB — ISW082",
+      "path": "."
+    }
+  ],
+
+  "settings": {
+    // Salva sozinho 1 segundo depois que você para de digitar.
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+
+    // Quebra a linha na largura da tela em vez de sumir pro lado.
+    "editor.wordWrap": "on",
+
+    // Deixa o Explorer (lista de arquivos) mais limpo.
+    "explorer.compactFolders": false,
+
+    // Digitar "html:5" e apertar Tab monta o esqueleto da página sozinho.
+    "emmet.triggerExpansionOnTab": true,
+
+    // A régua de indentação padrão de HTML/CSS/JS.
+    "editor.tabSize": 2,
+
+    // Esconde lixo do Windows da lista de arquivos.
+    "files.exclude": {
+      "**/Thumbs.db": true,
+      "**/desktop.ini": true
+    }
+  },
+
+  "extensions": {
+    // O VS Code vai sugerir instalar estas quando você abrir o workspace.
+    "recommendations": [
+      // Live Server: atualiza a página sozinha quando você salva.
+      "ritwickdey.liveserver",
+      // Sugere nomes de classes CSS enquanto você escreve o HTML.
+      "ecmel.vscode-html-css"
+    ]
+  }
+}
