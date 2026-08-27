@@ -24,7 +24,7 @@
     "emmet.triggerExpansionOnTab": true,
 
     // A régua de indentação padrão de HTML/CSS/JS.
-    "editor.tabSize": 2,
+    "editor.tabSize": 4,
 
     // Esconde lixo do Windows da lista de arquivos.
     "files.exclude": {
