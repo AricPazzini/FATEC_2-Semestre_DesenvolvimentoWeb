@@ -16,3 +16,9 @@ node_modules/
 .vscode/
 .idea/
 *.swp
+
+# Projeto da aula (fork do Leandro) — tem GitHub proprio, nao entra aqui
+REP GIT/projeto-eventos-2-ciclo/
+
+# Lixo de Mac que veio no fork
+.DS_Store
