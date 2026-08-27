@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #000;
+
+    .logo {
+        height: 60px;
+    }
+
+    .navigation {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+}
