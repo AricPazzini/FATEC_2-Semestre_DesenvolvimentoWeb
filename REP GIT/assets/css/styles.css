@@ -1,14 +1,23 @@
+:root {
+    --text-gray: #9aa3bd;
+    --bg-dark: #111;
+    --text-white: #fff;
+    --bg-button: #333;
+    --bg-hero: #222;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
 
 .header-menu {
     display: flex;
     justify-content: center;
     gap: 20px;
-    background-color: #000;
+    background-color: var(--bg-dark);
 
     .logo {
         height: 60px;
@@ -18,5 +27,41 @@
         display: flex;
         gap: 20px;
         align-items: center;
+        list-style: none;
+
+        .item {
+            .link {
+                color: var(--text-gray);
+                text-decoration: none;
+                transition: 0.3s;
+
+                &:hover,
+                &.active {
+                    color: var(--text-white);
+                }
+            }
+
+            .call-to-action {
+                background-color: var(--bg-button);
+                border: 1px solid var(--text-gray);
+                color: var(--text-white);
+                padding: 5px 10px;
+                border-radius: 20px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+.hero {
+    background-color: var(--bg-hero);
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .title {
+        color: var(--text-white);
     }
 }

@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Eventos</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -13,22 +19,23 @@
         <img class="logo" alt="logotipo eventos fatec" title="Logotipo eventos fatec"
             src="./assets/images/logotipo-eventos-fatec.png" />
         <ul class="navigation">
-            <li>
-                <a href="eventos.html">Eventos</a>
+            <li class="item">
+                <a class="link active" href="eventos.html">Eventos</a>
             </li>
-            <li>
-                <a href="categorias.html">Categorias</a>
+            <li class="item">
+                <a class="link" href="categorias.html">Categorias</a>
             </li>
-            <li>
-                <button>Explorar <i>Eventos</i></button>
+            <li class="item">
+                <button class="call-to-action">Explorar <i>Eventos</i></button>
             </li>
         </ul>
     </nav>
-    <header>
-        <h1>Onde sua turma encontra o próximo evento</h1>
-        <p>Aqui você encontra os melhores eventos da região</p>
 
-        <input type="text" placeholder="Buscar por nome do evento..." />
+    <header class="hero">
+        <h1 class="title">Onde sua turma encontra o próximo evento</h1>
+        <p class="description">Aqui você encontra os melhores eventos da região</p>
+
+        <input class="search" type="text" placeholder="Buscar por nome do evento..." />
     </header>
 </body>
 
