@@ -63,5 +63,24 @@
 
     .title {
         color: var(--text-white);
+        .highligth{[color:#9aa3bd]
+        }
     }
+    .description {
+        color: var(--text-gray);
+        margin-botton : 20px;
+    }
+}
+.search{
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: var(--bg-button);
+    border: 1px solid var(--text-gray);
+    color: var(--text-white);
+    outline: none;
+
+    max-width: 50%;
+    width: 100%;
+
+    
 }
