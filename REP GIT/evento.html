@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Eventos</title>
+    <title>Detalhes do Evento | Página de Eventos</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,7 +20,7 @@
             src="./assets/images/logotipo-eventos-fatec.png" />
         <ul class="navigation">
             <li class="item">
-                <a class="link active" href="index.html">Eventos</a>
+                <a class="link" href="index.html">Eventos</a>
             </li>
             <li class="item">
                 <a class="link" href="index.html#categorias">Categorias</a>
@@ -31,37 +31,29 @@
         </ul>
     </nav>
 
-    <header class="hero">
-        <h1 class="title">Onde sua turma <span class="highlight">encontra o próximo evento</span></h1>
-        <p class="description">Aqui você encontra os melhores eventos da região</p>
-
-        <input class="search" type="text" id="busca-eventos" placeholder="Buscar por nome do evento..." />
-    </header>
-
-    <section class="events">
-        <nav class="filter" id="categorias">
-            <ul class="filter-list">
-                <li class="item active" data-categoria="todos">Todos</li>
-                <li class="item" data-categoria="Workshop">Workshop</li>
-                <li class="item" data-categoria="Palestra">Palestra</li>
-                <li class="item" data-categoria="Hackathon">Hackathon</li>
-                <li class="item" data-categoria="Meetup">Meetup</li>
-                <li class="item" data-categoria="Curso">Curso</li>
-                <li class="item" data-categoria="Show">Show</li>
-            </ul>
+    <main class="detail">
+        <nav class="breadcrumb">
+            <a href="index.html">Eventos</a>
+            <span>/</span>
+            <span id="breadcrumb-titulo">Carregando...</span>
         </nav>
 
-        <p class="results-count" id="contador-eventos"></p>
+        <div id="detalhe-skeleton" class="detail-skeleton"></div>
 
-        <div class="list" id="lista-eventos"></div>
-    </section>
+        <div id="detalhe-conteudo" class="detail-content" hidden></div>
+
+        <div id="detalhe-nao-encontrado" class="empty-state" hidden>
+            <p>Evento não encontrado.</p>
+            <a class="btn-cta" href="index.html">Voltar para eventos</a>
+        </div>
+    </main>
 
     <footer class="footer">
         <p>© 2026 Eventos Fatec — Projeto de Desenvolvimento Web, 2º ciclo.</p>
     </footer>
 
     <script src="./js/api.js"></script>
-    <script src="./js/home.js"></script>
+    <script src="./js/detalhe.js"></script>
 </body>
 
 </html>

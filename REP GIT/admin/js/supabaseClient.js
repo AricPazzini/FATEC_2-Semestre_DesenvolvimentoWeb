@@ -1,0 +1,4 @@
+const SUPABASE_URL = "SUA_URL_DO_PROJETO_SUPABASE";
+const SUPABASE_ANON_KEY = "SUA_CHAVE_ANONIMA_SUPABASE";
+
+window.supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);

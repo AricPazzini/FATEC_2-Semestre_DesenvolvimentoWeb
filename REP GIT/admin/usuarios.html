@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários | Painel Administrativo</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="header-menu">
+        <img class="logo" alt="logotipo eventos fatec" title="Logotipo eventos fatec"
+            src="../assets/images/logotipo-eventos-fatec.png" />
+        <ul class="navigation">
+            <li class="item">
+                <a class="link" href="index.html">Painel</a>
+            </li>
+            <li class="item">
+                <a class="link" href="eventos.html">Eventos</a>
+            </li>
+            <li class="item">
+                <a class="link" href="categorias.html">Categorias</a>
+            </li>
+            <li class="item">
+                <a class="link" href="inscritos.html">Inscritos</a>
+            </li>
+            <li class="item">
+                <a class="link active" href="usuarios.html">Usuários</a>
+            </li>
+            <li class="item">
+                <a class="link" href="login.html">Sair</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="admin">
+        <div class="admin-header">
+            <div>
+                <h1>Usuários</h1>
+                <p>Controle quem tem acesso ao painel administrativo.</p>
+            </div>
+            <a class="btn-cta" href="#form-usuario">Novo usuário</a>
+        </div>
+
+        <section class="admin-panel">
+            <h2>Usuários cadastrados</h2>
+
+            <div class="admin-table-wrap">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Papel</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ana Ribeiro</td>
+                            <td>ana.ribeiro@fatec.sp.gov.br</td>
+                            <td><span class="badge badge-admin">Administrador</span></td>
+                            <td><span class="badge badge-active">Ativo</span></td>
+                            <td class="actions">
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Rafael Nunes</td>
+                            <td>rafael.nunes@fatec.sp.gov.br</td>
+                            <td><span class="badge badge-admin">Administrador</span></td>
+                            <td><span class="badge badge-active">Ativo</span></td>
+                            <td class="actions">
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Diretório Acadêmico</td>
+                            <td>diretorio@fatec.sp.gov.br</td>
+                            <td><span class="badge badge-user">Usuário</span></td>
+                            <td><span class="badge badge-inactive">Inativo</span></td>
+                            <td class="actions">
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="admin-panel" id="form-usuario">
+            <h2>Novo usuário</h2>
+
+            <form class="admin-form" data-supabase-table="usuarios" novalidate>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="campo-nome-usuario">Nome completo</label>
+                        <input type="text" id="campo-nome-usuario" name="nome" placeholder="Ex: Ana Ribeiro" />
+                    </div>
+
+                    <div class="form-field">
+                        <label for="campo-email-usuario">E-mail</label>
+                        <input type="email" id="campo-email-usuario" name="email" placeholder="voce@fatec.sp.gov.br" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="campo-senha-usuario">Senha</label>
+                        <input type="password" id="campo-senha-usuario" name="senha" placeholder="Senha provisória" />
+                    </div>
+
+                    <div class="form-field">
+                        <label for="campo-papel-usuario">Papel</label>
+                        <select id="campo-papel-usuario" name="papel">
+                            <option value="administrador">Administrador</option>
+                            <option value="usuario">Usuário</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="campo-status-usuario">Status</label>
+                        <select id="campo-status-usuario" name="status">
+                            <option value="ativo">Ativo</option>
+                            <option value="inativo">Inativo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="call-to-action">Salvar usuário</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Eventos Fatec — Projeto de Desenvolvimento Web, 2º ciclo.</p>
+    </footer>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> -->
+    <!-- <script src="./js/supabaseClient.js"></script> -->
+    <!-- <script src="./js/usuarios.js"></script> -->
+</body>
+
+</html>

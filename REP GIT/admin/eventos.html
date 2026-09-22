@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos | Painel Administrativo</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="header-menu">
+        <img class="logo" alt="logotipo eventos fatec" title="Logotipo eventos fatec"
+            src="../assets/images/logotipo-eventos-fatec.png" />
+        <ul class="navigation">
+            <li class="item">
+                <a class="link" href="index.html">Painel</a>
+            </li>
+            <li class="item">
+                <a class="link active" href="eventos.html">Eventos</a>
+            </li>
+            <li class="item">
+                <a class="link" href="categorias.html">Categorias</a>
+            </li>
+            <li class="item">
+                <a class="link" href="inscritos.html">Inscritos</a>
+            </li>
+            <li class="item">
+                <a class="link" href="usuarios.html">Usuários</a>
+            </li>
+            <li class="item">
+                <a class="link" href="login.html">Sair</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="admin">
+        <div class="admin-header">
+            <div>
+                <h1>Eventos</h1>
+                <p>Gerencie os eventos cadastrados. Protótipo estático, sem integração ainda.</p>
+            </div>
+            <a class="btn-cta" href="#form-evento">Novo evento</a>
+        </div>
+
+        <section class="admin-panel">
+            <h2>Eventos cadastrados</h2>
+
+            <div class="admin-table-wrap">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Evento</th>
+                            <th>Categoria</th>
+                            <th>Data</th>
+                            <th>Local</th>
+                            <th>Vagas</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML do Zero ao Avançado</td>
+                            <td>Workshop</td>
+                            <td>12 de Set. 2026</td>
+                            <td>Bloco C, sala 4</td>
+                            <td>17 / 40</td>
+                            <td class="actions">
+                                <a class="btn-sm btn-edit" href="inscritos.html?evento=workshop-1">Ver inscritos</a>
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Carreira em Tecnologia: por onde começar</td>
+                            <td>Palestra</td>
+                            <td>15 de Set. 2026</td>
+                            <td>Auditório principal</td>
+                            <td>54 / 120</td>
+                            <td class="actions">
+                                <a class="btn-sm btn-edit" href="inscritos.html?evento=palestra-1">Ver inscritos</a>
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hackathon Fatec 24h</td>
+                            <td>Hackathon</td>
+                            <td>10 de Out. 2026</td>
+                            <td>Laboratório de Redes</td>
+                            <td>6 / 60</td>
+                            <td class="actions">
+                                <a class="btn-sm btn-edit" href="inscritos.html?evento=hackathon-1">Ver inscritos</a>
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Meetup UX &amp; Produto</td>
+                            <td>Meetup</td>
+                            <td>16 de Out. 2026</td>
+                            <td>Espaço Coworking</td>
+                            <td>Esgotado</td>
+                            <td class="actions">
+                                <a class="btn-sm btn-edit" href="inscritos.html?evento=meetup-2">Ver inscritos</a>
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Curso de JavaScript Moderno</td>
+                            <td>Curso</td>
+                            <td>18 de Set. 2026</td>
+                            <td>Bloco C, sala 4</td>
+                            <td>15 / 35</td>
+                            <td class="actions">
+                                <a class="btn-sm btn-edit" href="inscritos.html?evento=curso-1">Ver inscritos</a>
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Show de Encerramento do Semestre</td>
+                            <td>Show</td>
+                            <td>5 de Dez. 2026</td>
+                            <td>Pátio Central</td>
+                            <td>180 / 300</td>
+                            <td class="actions">
+                                <a class="btn-sm btn-edit" href="inscritos.html?evento=show-1">Ver inscritos</a>
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="admin-panel" id="form-evento">
+            <h2>Novo evento</h2>
+
+            <form class="admin-form" data-supabase-table="eventos" novalidate>
+                <div class="form-field">
+                    <label for="campo-titulo">Nome do evento</label>
+                    <input type="text" id="campo-titulo" name="titulo" placeholder="Ex: Curso de Banco de Dados" />
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="campo-categoria">Categoria</label>
+                        <select id="campo-categoria" name="categoria">
+                            <option value="Workshop">Workshop</option>
+                            <option value="Palestra">Palestra</option>
+                            <option value="Hackathon">Hackathon</option>
+                            <option value="Meetup">Meetup</option>
+                            <option value="Curso">Curso</option>
+                            <option value="Show">Show</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="campo-data">Data</label>
+                        <input type="date" id="campo-data" name="data" />
+                    </div>
+
+                    <div class="form-field">
+                        <label for="campo-horario">Horário</label>
+                        <input type="text" id="campo-horario" name="horario" placeholder="Ex: 19h às 22h" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="campo-local">Local</label>
+                        <input type="text" id="campo-local" name="local" placeholder="Ex: Bloco C, sala 4" />
+                    </div>
+
+                    <div class="form-field">
+                        <label for="campo-endereco">Endereço completo</label>
+                        <input type="text" id="campo-endereco" name="endereco"
+                            placeholder="Ex: Campus Fatec São Paulo - Bloco C" />
+                    </div>
+
+                    <div class="form-field">
+                        <label for="campo-organizador">Organização</label>
+                        <input type="text" id="campo-organizador" name="organizador" placeholder="Ex: Prof. Ana Ribeiro" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="campo-vagas-totais">Vagas totais</label>
+                        <input type="number" id="campo-vagas-totais" name="vagas_totais" min="0" placeholder="Ex: 40" />
+                    </div>
+
+                    <div class="form-field">
+                        <label for="campo-vagas-restantes">Vagas restantes</label>
+                        <input type="number" id="campo-vagas-restantes" name="vagas_restantes" min="0"
+                            placeholder="Ex: 17" />
+                    </div>
+
+                    <div class="form-field">
+                        <label for="campo-destaque">Destaque</label>
+                        <div class="checkbox-field">
+                            <input type="checkbox" id="campo-destaque" name="destaque" />
+                            <label for="campo-destaque">Exibir selo "Destaque" no card</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="campo-descricao">Descrição completa</label>
+                    <textarea id="campo-descricao" name="descricao"
+                        placeholder="Detalhes exibidos na página do evento"></textarea>
+                </div>
+
+                <button type="submit" class="call-to-action">Salvar evento</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Eventos Fatec — Projeto de Desenvolvimento Web, 2º ciclo.</p>
+    </footer>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> -->
+    <!-- <script src="./js/supabaseClient.js"></script> -->
+    <!-- <script src="./js/eventos.js"></script> -->
+</body>
+
+</html>

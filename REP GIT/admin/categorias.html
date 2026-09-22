@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias | Painel Administrativo</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="header-menu">
+        <img class="logo" alt="logotipo eventos fatec" title="Logotipo eventos fatec"
+            src="../assets/images/logotipo-eventos-fatec.png" />
+        <ul class="navigation">
+            <li class="item">
+                <a class="link" href="index.html">Painel</a>
+            </li>
+            <li class="item">
+                <a class="link" href="eventos.html">Eventos</a>
+            </li>
+            <li class="item">
+                <a class="link active" href="categorias.html">Categorias</a>
+            </li>
+            <li class="item">
+                <a class="link" href="inscritos.html">Inscritos</a>
+            </li>
+            <li class="item">
+                <a class="link" href="usuarios.html">Usuários</a>
+            </li>
+            <li class="item">
+                <a class="link" href="login.html">Sair</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="admin">
+        <div class="admin-header">
+            <div>
+                <h1>Categorias</h1>
+                <p>Gerencie as categorias usadas para organizar e filtrar os eventos.</p>
+            </div>
+            <a class="btn-cta" href="#form-categoria">Nova categoria</a>
+        </div>
+
+        <section class="admin-panel">
+            <h2>Categorias cadastradas</h2>
+
+            <div class="admin-table-wrap">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Categoria</th>
+                            <th>Slug</th>
+                            <th>Eventos vinculados</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="color-dot" style="background-color:#e20543"></span>Workshop</td>
+                            <td>workshop</td>
+                            <td>2</td>
+                            <td class="actions">
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="color-dot" style="background-color:#bf09cf"></span>Palestra</td>
+                            <td>palestra</td>
+                            <td>2</td>
+                            <td class="actions">
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="color-dot" style="background-color:#2ecc71"></span>Hackathon</td>
+                            <td>hackathon</td>
+                            <td>2</td>
+                            <td class="actions">
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="color-dot" style="background-color:#3498db"></span>Meetup</td>
+                            <td>meetup</td>
+                            <td>2</td>
+                            <td class="actions">
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="color-dot" style="background-color:#f39c12"></span>Curso</td>
+                            <td>curso</td>
+                            <td>2</td>
+                            <td class="actions">
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="color-dot" style="background-color:#9b59b6"></span>Show</td>
+                            <td>show</td>
+                            <td>2</td>
+                            <td class="actions">
+                                <button type="button" class="btn-sm btn-edit">Editar</button>
+                                <button type="button" class="btn-sm btn-delete">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="admin-panel" id="form-categoria">
+            <h2>Nova categoria</h2>
+
+            <form class="admin-form" data-supabase-table="categorias" novalidate>
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="campo-nome-categoria">Nome da categoria</label>
+                        <input type="text" id="campo-nome-categoria" name="nome" placeholder="Ex: Feira de Carreiras" />
+                    </div>
+
+                    <div class="form-field">
+                        <label for="campo-slug-categoria">Slug</label>
+                        <input type="text" id="campo-slug-categoria" name="slug" placeholder="Ex: feira-de-carreiras" />
+                    </div>
+
+                    <div class="form-field">
+                        <label for="campo-cor-categoria">Cor de destaque</label>
+                        <input type="color" id="campo-cor-categoria" name="cor" value="#e20543" />
+                    </div>
+                </div>
+
+                <button type="submit" class="call-to-action">Salvar categoria</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Eventos Fatec — Projeto de Desenvolvimento Web, 2º ciclo.</p>
+    </footer>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> -->
+    <!-- <script src="./js/supabaseClient.js"></script> -->
+    <!-- <script src="./js/categorias.js"></script> -->
+</body>
+
+</html>
